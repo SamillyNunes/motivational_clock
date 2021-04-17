@@ -1,16 +1,25 @@
-# motivational_clock
+# 🕒 Motivational Clock
 
-A new Flutter project.
+This is a clock application, written with Flutter framework. This app goals to have some clock functions as alarm, timer, and others.
 
-## Getting Started
+## 📱 Current state snapshot
 
-This project is a starting point for a Flutter application.
+The app is still being built, so its current state is as below:
 
-A few resources to get you started if this is your first Flutter project:
+![Snapshot of app](https://github.com/SamillyNunes/motivational_clock/blob/main/assets/readme_media/clock-app.png)
 
-- [Lab: Write your first Flutter app](https://flutter.dev/docs/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://flutter.dev/docs/cookbook)
+## 💭 Inspiration
 
-For help getting started with Flutter, view our
-[online documentation](https://flutter.dev/docs), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+The application is being built with a design inspiration found in https://dribbble.com/shots/6738814-Clock-App-UI-screens and Codex videos (watch https://www.youtube.com/watch?v=HyAeZKWWuxA). My goal is mainly to practicing custom painter and alarms with Flutter.
+
+## ✔️ To-do list
+[x] Clock design
+[ ] Side menu
+[ ] Alarms
+[ ] Timers
+[ ] Stopwatch
+[ ] Motivational alarm
+
+## 📍 Find me!
+- Instagram: @samyy_nunes
+- Linkedin: https://www.linkedin.com/in/samillynunes19/

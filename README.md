@@ -6,7 +6,7 @@ This is a clock application, written with Flutter framework. This app goals to h
 
 The app is still being built, so its current state is as below:
 
-![Snapshot of app](https://github.com/SamillyNunes/motivational_clock/blob/main/assets/readme_media/clock-app.png)
+![Snapshot of app](https://github.com/SamillyNunes/motivational_clock/blob/main/assets/readme_media/current-state.jpg)
 
 ## 💭 Inspiration
 

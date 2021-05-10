@@ -1,7 +1,10 @@
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:device_preview/device_preview.dart';
+import 'package:motivational_clock/enums/enums.dart';
+import 'package:motivational_clock/models/menu_info_model.dart';
 import 'package:motivational_clock/views/home_view.dart';
+import 'package:provider/provider.dart';
 
 void main() {
   runApp(
@@ -21,7 +24,14 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
-      home: HomeView(),
+      home: ChangeNotifierProvider<MenuInfoModel>(
+        create: (context) => MenuInfoModel(
+          menuType: MenyType.clock,
+          title: "Relógio",
+          imageSource: "assets/images/clock_icon.png",
+        ),
+        child: HomeView(),
+      ),
     );
   }
 }

@@ -15,6 +15,7 @@ dependencies:
   device_preview: ^0.7.1
   intl: ^0.17.0
   provider: ^5.0.0
+  dotted_border: ^2.0.0
 
 dev_dependencies:
   flutter_test:

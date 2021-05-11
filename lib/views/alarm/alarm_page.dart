@@ -1,3 +1,4 @@
+import 'package:dotted_border/dotted_border.dart';
 import 'package:flutter/material.dart';
 import 'package:motivational_clock/constants/theme_data.dart';
 import 'package:motivational_clock/data.dart';
@@ -25,7 +26,7 @@ class AlarmPage extends StatelessWidget {
           ),
           Expanded(
             child: ListView(
-              children: alarms.map(
+              children: alarms.map<Widget>(
                 (alarm) {
                   return Padding(
                     padding: const EdgeInsets.only(bottom: 32.0),
@@ -112,7 +113,46 @@ class AlarmPage extends StatelessWidget {
                     ),
                   );
                 },
-              ).toList(),
+              ).followedBy([
+                Padding(
+                  padding: const EdgeInsets.only(bottom: 32.0),
+                  child: DottedBorder(
+                    strokeWidth: 3,
+                    color: CustomColors.clockOutline,
+                    borderType: BorderType.RRect,
+                    radius: Radius.circular(24),
+                    dashPattern: [5, 4],
+                    child: Container(
+                      width: double.infinity,
+                      padding: const EdgeInsets.symmetric(
+                          horizontal: 16, vertical: 8),
+                      decoration: BoxDecoration(
+                        borderRadius: BorderRadius.circular(24),
+                        color: CustomColors.clockBG,
+                      ),
+                      child: TextButton(
+                        onPressed: () {},
+                        child: Column(
+                          children: [
+                            Image.asset(
+                              "assets/images/add_alarm.png",
+                              scale: 1.5,
+                            ),
+                            SizedBox(height: 8),
+                            Text(
+                              "Adicionar alarme",
+                              style: TextStyle(
+                                color: Colors.white,
+                                fontFamily: "avenir",
+                              ),
+                            ),
+                          ],
+                        ),
+                      ),
+                    ),
+                  ),
+                ),
+              ]).toList(),
             ),
           ),
         ],

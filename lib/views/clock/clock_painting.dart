@@ -3,19 +3,19 @@ import 'dart:math';
 
 import 'package:flutter/material.dart';
 
-class ClockView extends StatefulWidget {
+class ClockPainting extends StatefulWidget {
   final double size;
 
-  const ClockView({
+  const ClockPainting({
     Key? key,
     required this.size,
   }) : super(key: key);
 
   @override
-  _ClockViewState createState() => _ClockViewState();
+  _ClockPaintingState createState() => _ClockPaintingState();
 }
 
-class _ClockViewState extends State<ClockView> {
+class _ClockPaintingState extends State<ClockPainting> {
   @override
   void initState() {
     // aqui estamos definindo um timer periodicamente que ira rodar um codigo a cada duracao definida

@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:device_preview/device_preview.dart';
 import 'package:motivational_clock/enums/enums.dart';
 import 'package:motivational_clock/models/menu_info_model.dart';
-import 'package:motivational_clock/views/home_view.dart';
+import 'package:motivational_clock/views/home/home_view.dart';
 import 'package:provider/provider.dart';
 
 void main() {

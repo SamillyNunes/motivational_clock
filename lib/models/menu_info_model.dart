@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:motivational_clock/enums/enums.dart';
 
 class MenuInfoModel extends ChangeNotifier {
-  MenyType menuType;
+  MenuType menuType;
   String title;
   String imageSource;
 

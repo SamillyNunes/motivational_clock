@@ -4,6 +4,7 @@ import 'package:motivational_clock/constants/theme_data.dart';
 import 'package:motivational_clock/data.dart';
 import 'package:motivational_clock/enums/enums.dart';
 import 'package:motivational_clock/models/menu_info_model.dart';
+import 'package:motivational_clock/views/alarm/alarm_page.dart';
 import 'package:motivational_clock/views/clock/clock_page.dart';
 import 'package:motivational_clock/views/clock/clock_painting.dart';
 import 'package:provider/provider.dart';
@@ -36,8 +37,10 @@ class _HomeViewState extends State<HomeView> {
             child: Consumer<MenuInfoModel>(
               builder: (context, value, child) {
                 switch (value.menuType) {
-                  case MenyType.clock:
+                  case MenuType.clock:
                     return ClockPage();
+                  case MenuType.alarm:
+                    return AlarmPage();
                   default:
                     return Container();
                 }

@@ -1,7 +1,9 @@
 import 'package:dotted_border/dotted_border.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_local_notifications/flutter_local_notifications.dart';
 import 'package:motivational_clock/constants/theme_data.dart';
 import 'package:motivational_clock/data.dart';
+import 'package:motivational_clock/main.dart';
 
 class AlarmPage extends StatelessWidget {
   @override
@@ -131,7 +133,9 @@ class AlarmPage extends StatelessWidget {
                         color: CustomColors.clockBG,
                       ),
                       child: TextButton(
-                        onPressed: () {},
+                        onPressed: () {
+                          scheduleAlarm();
+                        },
                         child: Column(
                           children: [
                             Image.asset(
@@ -157,6 +161,30 @@ class AlarmPage extends StatelessWidget {
           ),
         ],
       ),
+    );
+  }
+
+  void scheduleAlarm() async {
+    var scheduledNotificationDateTime =
+        DateTime.now().add(Duration(seconds: 3));
+
+    var androidPlatformChannelSpecifics = AndroidNotificationDetails(
+      "alarm_notif",
+      "alarm_notif",
+      "Channel for Alarm notification",
+      icon: "clock_icon",
+      largeIcon: DrawableResourceAndroidBitmap('clock_icon'),
+    );
+
+    var platformChannelSpecifics =
+        NotificationDetails(android: androidPlatformChannelSpecifics);
+
+    await flutterLocalNotificationsPlugin.schedule(
+      0,
+      "Office",
+      "Alarme setado. Bora lá?!",
+      scheduledNotificationDateTime,
+      platformChannelSpecifics,
     );
   }
 }
